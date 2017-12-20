@@ -542,7 +542,11 @@ var keyboardDown = function () {
 }
 
 var mobileTouch = function () {
-    util.toucher(document.querySelector('checkerboard'))
+    let checkerboard = document.querySelector('checkerboard')
+    checkerboard.addEventListener('touchmove', (event) => {
+        event.preventDefault()
+    })
+    util.toucher(checkerboard)
         .on('swipeLeft', function (event) {
             left()
         })
