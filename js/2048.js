@@ -575,39 +575,18 @@ var touchDirection = function (vertical, distanceX, horizontal, distanceY) {
 }
 
 var touchBindEvent = function () {
-    let startY, endY, startX, endX
-    let checkerboard = document.querySelector('checkerboard')
-    let startTouchScroll = function (event) {
-        event.preventDefault()
-        let touch = event.touches[0]
-        startX = touch.pageX
-        startY = touch.pageY
-    }
-
-    let moveTouchScroll = function (event) {
-        event.preventDefault()
-        let touch = event.touches[0]
-        endX = touch.pageX
-        endY = touch.pageY
-    }
-
-    let endTouchScroll = function (event) {
-        event.preventDefault()
-
-        //判断移动的点,1为手指向下滑动,-1为手指向上滑动
-        let vertical = (endY - startY) > 0 ? 'down' : 'top'
-        //判断移动的点,1为手指向右滑动,-1为手指向左滑动
-        let horizontal = (endX - startX) > 0 ? 'right' : 'left'
-        //计算滑动距离
-        let distanceX = Math.abs(endY - startY)
-        let distanceY = Math.abs(endX - startY)
-        let direction = touchDirection(vertical, distanceX, horizontal, distanceY)
-        touchMove(direction)
-    }
-
-    checkerboard.addEventListener("touchstart", startTouchScroll, false)
-    checkerboard.addEventListener("touchmove", moveTouchScroll, false)
-    checkerboard.addEventListener("touchend", endTouchScroll, false)
+    util.toucher(document.querySelector('checkerboard'))
+        .on('swipeLeft', function (event) {
+            left()
+        })
+        .on('swipeRight', function () {
+            right()
+        })
+        .on('swipeUp', function () {
+            topMove()
+        }).on('swipeDown', function () {
+            down()
+        })
 }
 
 var cleanAllNumber = function () {
