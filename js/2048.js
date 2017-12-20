@@ -541,40 +541,7 @@ var keyboardDown = function () {
     })
 }
 
-var mobileTouch = function (type) {
-
-}
-
-var touchMove = function (direction) {
-    log('touch move`', direction)
-    if (direction === 'no move') {
-        return
-    } else if (direction === 'down') {
-        down()
-    } else if (direction === 'top') {
-        topMove()
-    } else if (direction === 'right') {
-        right()
-    } else if (direction === 'left') {
-        left()
-    }
-}
-
-var touchDirection = function (vertical, distanceX, horizontal, distanceY) {
-    let result = vertical
-    if (isNaN(distanceY) || isNaN(distanceX)) {
-        result = 'no move'
-    } else if (distanceX > distanceY) {
-        result = vertical
-    } else if (distanceX < distanceY) {
-        result = horizontal
-    } else {
-        log('等死吧`', distanceX, distanceY)
-    }
-    return result
-}
-
-var touchBindEvent = function () {
+var mobileTouch = function () {
     util.toucher(document.querySelector('checkerboard'))
         .on('swipeLeft', function (event) {
             left()
@@ -605,15 +572,13 @@ var init = function () {
 
 var again = function () {
     let b = document.querySelector('#id-button-again')
-    b.addEventListener('click', (event) => {
-        init()
-    })
+    b.addEventListener('click', init)
 }
 
 const _main = function () {
     again()
     keyboardDown()
-    touchBindEvent()
+    mobileTouch()
     init()
 }
 
