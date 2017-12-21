@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58e311cb-6e0a-4237-8478-76c8eabe8818" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/2048.css" afterPath="$PROJECT_DIR$/css/2048.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/2048.js" afterPath="$PROJECT_DIR$/js/2048.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/touch.js" afterPath="$PROJECT_DIR$/js/touch.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +40,8 @@
       <file leaf-file-name="2048.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/2048.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="328" column="42" lean-forward="false" selection-start-line="328" selection-start-column="42" selection-end-line="328" selection-end-column="42" />
+            <state relative-caret-position="119">
+              <caret line="324" column="14" lean-forward="true" selection-start-line="324" selection-start-column="14" selection-end-line="324" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -240,6 +240,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="58e311cb-6e0a-4237-8478-76c8eabe8818" name="Default" comment="" />
@@ -302,8 +305,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/2048.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="328" column="42" lean-forward="false" selection-start-line="328" selection-start-column="42" selection-end-line="328" selection-end-column="42" />
+        <state relative-caret-position="119">
+          <caret line="324" column="14" lean-forward="true" selection-start-line="324" selection-start-column="14" selection-end-line="324" selection-end-column="14" />
           <folding />
         </state>
       </provider>
